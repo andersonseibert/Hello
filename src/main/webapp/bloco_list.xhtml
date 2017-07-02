@@ -34,6 +34,9 @@
                         </div>
                     </p:panel>                    
                     <p:panel visible="#{!blocoBean.formAtivo}">
+                        <h:commandButton class="btn btn-default pull-right" 
+                                         value="Novo Bloco" 
+                                         action="#{blocoBean.add()}" />
                         <h2><h:outputText value="Lista de Blocos"/></h2>
                         <h:dataTable class="table table-hover" value="#{blocoBean.blocos}" var="item"
                                      columnClasses="col-md-8 col-md-1 col-md-1 col-md-2">
@@ -52,8 +55,7 @@
                                 </h:commandLink>
                             </h:column>                    
                         </h:dataTable>
-                        <br />
-                        <h:commandButton class="btn btn-default" value="Novo Bloco" action="#{blocoBean.add()}" />
+                        <br />                        
                     </p:panel>
                 </h:form>
             </ui:define>

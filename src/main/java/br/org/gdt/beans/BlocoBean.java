@@ -43,6 +43,7 @@ public class BlocoBean {
 
     public String excluir(Bloco bloco) {
         blocoService.delete(bloco.getId());
+        blocos = blocoService.findAll();
         return "bloco_list";
     }
 
